@@ -20,6 +20,7 @@ cp -r vundle-vim/.fonts ~/.fonts
 fv-cache -vf
 #其他字体需要说明操作
 https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
+#官方otf字体不知为何无效，日后研究
 
 2)Command-t安装问题
 错误：`require’: no such file to load — mkmf (LoadError)'
