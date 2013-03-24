@@ -27,6 +27,7 @@ sudo apt-get install dos2unix
 dos2unix ~/.vim/bundle/QFixToggle/plugin/qfixtoggle.vim
 
 4)NerdTree错误
+NerdTree中添加了tag的打开
 需要安装Exuberant Ctags
 sudo apt-get install exuberant-ctags
 
