@@ -66,7 +66,6 @@ Bundle 'tpope/vim-fugitive.git'
 Bundle 'tpope/vim-rails.git'
 Bundle 'LargeFile'
 
-"under linux need exec 'dos2unix ~/.vim/bundle/QFixToggle/plugin/qfixtoggle.vim'
 Bundle 'QFixToggle'
 Bundle 'Color-Sampler-Pack'
 Bundle 'altercation/vim-colors-solarized'
@@ -100,8 +99,6 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'ScrollColors'
 
 " non github repos
-" autocomplete.match.pair.vim,这个安装完必须在.vim/bundle/449512/目录下创建plugin目录并在其下创建软链接指向autocomplete.match.pair.vim,否则不工作,另外不知为何(号不会自动完成配对
-Bundle 'git://gist.github.com/449512.git'
 " ...
 filetype plugin indent on     " required!
 "vundle end
