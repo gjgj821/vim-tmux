@@ -2,9 +2,9 @@
 
 一.使用方法：
 cd ~
-git clone https://github.com/longfeey/vundle-vim.git 
+git clone https://github.com/gjgj821/vundle-vim.git 
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-cp vundle-vim/vimrc ~/.vimrc
+cp vundle-vim/.vimrc ~/.vimrc
 
 安装插件
 打开vim 
