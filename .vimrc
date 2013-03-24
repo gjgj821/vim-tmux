@@ -76,7 +76,9 @@ Bundle 'tpope/vim-surround.git'
 Bundle 'DoxygenToolkit.vim'
 Bundle 'headerGatesAdd.vim'
 Bundle 'ShowMarks'
-Bundle 'Lokaltog/vim-powerline'
+" 作者更换插件
+"Bundle 'Lokaltog/vim-powerline'
+Bundle 'Lokaltog/powerline'
 
 " for my plugin
 " 代码段补全
