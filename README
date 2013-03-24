@@ -10,10 +10,11 @@ cp vundle-vim/.vimrc ~/.vimrc
 打开vim 
 在vim命令行输入:BundleInstall,回车，开始下载vimrc配置中的插件
 
+配置中的样式文件同样在.vim/colors/下
+cp -r vundle-vim/.vim ~/.vim
+
 二.可能存在的问题：
 1)powerline乱码问题
-默认没有带字体，所以需要自己下载字体。
-#在https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts 选择字体下载到~/.fonts目录即可。
 目前作者已经更换项目了，我将Ubuntu的默认字体文件放置在.fonts文件夹下，可以直接复制
 cp -r vundle-vim/.fonts ~/.fonts
 fv-cache -vf
