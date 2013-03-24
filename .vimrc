@@ -175,7 +175,7 @@ hi Normal ctermbg=NONE  "开启背景透明
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 "colorscheme peaksea
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme ir_black
 set background=dark
 " }}}
 
