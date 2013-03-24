@@ -26,6 +26,10 @@ QFixToggle/plugin/qfixtoggle.vim为DOS格式，需要转换为unix格式
 sudo apt-get install dos2unix
 dos2unix ~/.vim/bundle/QFixToggle/plugin/qfixtoggle.vim
 
+4)NerdTree错误
+需要安装Exuberant Ctags
+sudo apt-get install exuberant-ctags
+
 二.Vundle说明
 1.Vundle介绍
 项目托管在github上 https://github.com/gmarik/vundle
