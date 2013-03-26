@@ -45,7 +45,19 @@ NerdTree中添加了tag的打开
 需要安装Exuberant Ctags
 sudo apt-get install exuberant-ctags
 
-三.tmux
+三.tmux可能遇到的问题
+1)进入后没有任何改变
+有可能tmux没有加载配置文件
+tmux source-file ~/.tmux.conf
+~/.tmux/tmux
+2)状态栏为空
+脚本执行错误
+~/.tmux/tmux/tmux-powerline/powerline.sh left
+~/.tmux/tmux/tmux-powerline/powerline.sh right
+安装curl
+sudo apt-get install curl
+
+
 二.Vundle说明
 1.Vundle介绍
 项目托管在github上 https://github.com/gmarik/vundle
