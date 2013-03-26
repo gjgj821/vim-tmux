@@ -1,23 +1,30 @@
+保存配置vim及tmux的配置文件
 使用Vundle管理vim插件，既方便有省心，我们只需维护好.vimrc文件，便很方便的管理，更新vim插件。
 
 一.使用方法：
 cd ~
-git clone https://github.com/gjgj821/vundle-vim.git 
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-cp vundle-vim/.vimrc ~/.vimrc
+git clone https://github.com/gjgj821/vim-tmux.git 
 
+vim：
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+cp vim-tmux/.vimrc ~/.vimrc
 安装插件
 打开vim 
 在vim命令行输入:BundleInstall,回车，开始下载vimrc配置中的插件
-
 配置中的样式文件同样在.vim/colors/下
-cp -r vundle-vim/.vim ~/.vim
+cp -r vim-tmux/.vim ~/.vim
+powerline增强所需的字体
+cp -r vim-tmux/.fonts ~/.fonts
+fv-cache -vf
 
-二.可能存在的问题：
+tmux：
+cp vim-tmux/.tmux ~/.tmux
+git clone https://github.com/erikw/tmux-powerline.git
+cp vim-tmux/.tmux.conf ~/.tmux.conf
+
+二.vim可能存在的问题：
 1)powerline乱码问题
 目前作者已经更换项目了，我将Ubuntu的默认字体文件放置在.fonts文件夹下，可以直接复制
-cp -r vundle-vim/.fonts ~/.fonts
-fv-cache -vf
 #其他字体需要说明操作
 https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
 #官方otf字体不知为何无效，日后研究
@@ -38,6 +45,7 @@ NerdTree中添加了tag的打开
 需要安装Exuberant Ctags
 sudo apt-get install exuberant-ctags
 
+三.tmux
 二.Vundle说明
 1.Vundle介绍
 项目托管在github上 https://github.com/gmarik/vundle
