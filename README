@@ -21,6 +21,8 @@ tmux：
 cp vim-tmux/.tmux ~/.tmux
 git clone https://github.com/erikw/tmux-powerline.git
 cp vim-tmux/.tmux.conf ~/.tmux.conf
+cp vim-tmux/.tmux-powerlinerc ~/.tmux-powerlinerc
+
 
 二.vim可能存在的问题：
 1)powerline乱码问题
