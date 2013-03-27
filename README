@@ -15,4 +15,4 @@
 3.在$HOME/.vim下建立插件库
 	新建文件夹bundle
 	下载vundle插件库
-	git://github.com/gmarik/vundle.git $HOME/vimfiles/bundle/vundle
+	git://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
