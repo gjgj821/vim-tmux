@@ -252,7 +252,7 @@ endif
 
      set guioptions-=R " 关闭垂直分隔窗口右边滚动条
 
-     set guifont=Monospace:12 "在Linux下设置字体的命令是：
+     set guifont=DejaVu_Sans_Mono_for_Powerline:h10"
 
      set guicursor=a:blinkon0 "停止光标闪烁
 
