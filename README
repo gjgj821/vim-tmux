@@ -18,7 +18,7 @@ cp -r vim-tmux/.fonts ~/.fonts
 fv-cache -vf
 
 tmux：
-cp vim-tmux/.tmux ~/.tmux
+cp -r vim-tmux/.tmux ~/.tmux
 git clone https://github.com/erikw/tmux-powerline.git
 cp vim-tmux/.tmux.conf ~/.tmux.conf
 cp vim-tmux/.tmux-powerlinerc ~/.tmux-powerlinerc
@@ -55,8 +55,8 @@ tmux source-file ~/.tmux.conf
 
 2)状态栏为空
 脚本执行错误
-~/.tmux/tmux/tmux-powerline/powerline.sh left
-~/.tmux/tmux/tmux-powerline/powerline.sh right
+~/.tmux/tmux-powerline/powerline.sh left
+~/.tmux/tmux-powerline/powerline.sh right
 安装curl
 sudo apt-get install curl
 
