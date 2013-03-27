@@ -1,74 +1,18 @@
-保存配置vim及tmux的配置文件
- 使用Vundle管理vim插件，既方便有省心，我们只需维护好.vimrc文件，便很方便的管理，更新vim插件。
-
-一.使用方法：
-cd ~
-git clone https://github.com/gjgj821/vim-tmux.git 
-
-vim：
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-cp vim-tmux/.vimrc ~
-安装插件
-打开vim 
-在vim命令行输入:BundleInstall,回车，开始下载vimrc配置中的插件
-配置中的样式文件同样在.vim/colors/下
-cp -r vim-tmux/.vim ~
-powerline增强所需的字体
-cp -r vim-tmux/.fonts ~
-fv-cache -vf
-
-tmux：
-cp -r vim-tmux/.tmux ~
-git clone https://github.com/erikw/tmux-powerline.git
-cp vim-tmux/.tmux.conf ~/.tmux.conf
-cp vim-tmux/.tmux-powerlinerc ~/.tmux-powerlinerc
-
-
-二.vim可能存在的问题：
-1)powerline乱码问题
-目前作者已经更换项目了，我将Ubuntu的默认字体文件放置在.fonts文件夹下，可以直接复制
-#其他字体需要说明操作
-https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
-#官方otf字体不知为何无效，日后研究
-
-2)Command-t安装问题
-错误：`require’: no such file to load — mkmf (LoadError)'
-
-mkmf.rb is part of the “ruby1.8-dev” package. 
-sudo apt-get install ruby1.8-dev
-
-3)Qfixtoggle错误
-QFixToggle/plugin/qfixtoggle.vim为DOS格式，需要转换为unix格式
-sudo apt-get install dos2unix
-dos2unix ~/.vim/bundle/QFixToggle/plugin/qfixtoggle.vim
-
-4)NerdTree错误
-NerdTree中添加了tag的打开
-需要安装Exuberant Ctags
-sudo apt-get install exuberant-ctags
-
-三.tmux可能遇到的问题
-
-1)进入后没有任何改变
-有可能tmux没有加载配置文件
-tmux source-file ~/.tmux.conf
-
-2)状态栏为空
-脚本执行错误
-~/.tmux/tmux-powerline/powerline.sh left
-~/.tmux/tmux-powerline/powerline.sh right
-安装curl
-sudo apt-get install curl
-
-
-三.Vundle说明
-1.Vundle介绍
-项目托管在github上 https://github.com/gmarik/vundle
-其特色在于使用git来管理插件,更新方便，支持搜索，一键更新，从此只需要一个vimrc走天下.
-
-2.安装与配置
-使用git命令$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
-windows下使用，可以考虑放置在$HOME/.vim/bundle/vundle
-
-四.Windows下使用的配置文件
+记录Windows下的Vim配置方法
+1.安装GVIM
+3.安装git：
+ 安装msysgit:
+		将git目录添加到环境变量中
+		C:\msysgit\msysgit\cmd;
+2.获取github中的配置库
+	git://github.com/gjgj821/vim-tmux.git
+	切换到windows版本
+	将_vimrc复制到$HOME/_vimrc
+	
+	复制.vim及.font目录到$HOME
+	复制curl.cmd到git目录下的cmd目录
+		与git.cmd在一个目录
+3.在$HOME/.vim下建立插件库
+	新建文件夹bundle
+	下载vundle插件库
+	git://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
