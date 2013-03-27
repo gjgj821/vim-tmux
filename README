@@ -9,10 +9,10 @@
 	切换到windows版本
 	将_vimrc复制到$HOME/_vimrc
 	
-	复制.vim及.font目录到$HOME
+	复制vimfiles录到$HOME
 	复制curl.cmd到git目录下的cmd目录
 		与git.cmd在一个目录
 3.在$HOME/.vim下建立插件库
 	新建文件夹bundle
 	下载vundle插件库
-	git://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+	git://github.com/gmarik/vundle.git $HOME/vimfiles/bundle/vundle
