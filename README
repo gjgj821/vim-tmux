@@ -27,3 +27,6 @@
 6.如果字体安装后状态栏乱码
 删除powerline缓存文件
 $HOME/.vim/bundle/vim-powerline/Powerline_default_default_fancy.cache
+
+7.全屏切换，置顶，透明插件
+将GVimWindow.exe放置在git目录下
