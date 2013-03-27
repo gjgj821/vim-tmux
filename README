@@ -9,9 +9,10 @@
 	切换到windows版本
 	将_vimrc复制到$HOME/_vimrc
 	
-	复制vimfiles录到$HOME
+	复制vimfiles目录到$HOME
 	复制curl.cmd到git目录下的cmd目录
 		与git.cmd在一个目录
+	复制.font内的字体到C:\Windows\Fonts中进行字体安装
 3.在$HOME/.vim下建立插件库
 	新建文件夹bundle
 	下载vundle插件库
