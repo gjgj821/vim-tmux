@@ -7,18 +7,18 @@ git clone https://github.com/gjgj821/vim-tmux.git
 
 vim：
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-cp vim-tmux/.vimrc ~/.vimrc
+cp vim-tmux/.vimrc ~
 安装插件
 打开vim 
 在vim命令行输入:BundleInstall,回车，开始下载vimrc配置中的插件
 配置中的样式文件同样在.vim/colors/下
-cp -r vim-tmux/.vim ~/.vim
+cp -r vim-tmux/.vim ~
 powerline增强所需的字体
-cp -r vim-tmux/.fonts ~/.fonts
+cp -r vim-tmux/.fonts ~
 fv-cache -vf
 
 tmux：
-cp -r vim-tmux/.tmux ~/.tmux
+cp -r vim-tmux/.tmux ~
 git clone https://github.com/erikw/tmux-powerline.git
 cp vim-tmux/.tmux.conf ~/.tmux.conf
 cp vim-tmux/.tmux-powerlinerc ~/.tmux-powerlinerc
