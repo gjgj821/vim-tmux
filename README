@@ -16,3 +16,6 @@
 	新建文件夹bundle
 	下载vundle插件库
 	git://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+
+4.ShowMarks插件需要在对应目录下建立doc文件夹
+$HOME/.vim/bundle/ShowMarks
