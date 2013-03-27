@@ -1609,4 +1609,10 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 " export MYTAGS_DB=/home/tags/tags
 
 "}}}
-
+"全屏切换
+"{{{
+function! FullScreen()
+call system(“wmctrl -r :ACTIVE: -b toggle,fullscreen”)
+endfunction
+nmap <F11> :call FullScreen()<cr>
+"}}}
