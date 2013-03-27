@@ -1610,3 +1610,9 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 
 "}}}
 
+"全屏切换，置顶，透明
+"{{{
+nmap <F11> :!start GVimWindow<CR>
+nmap <C-F11> :!start GVimWindow "ontop"<CR>
+nmap <S-F11> :!start GVimWindow 
+"}}}
