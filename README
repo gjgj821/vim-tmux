@@ -18,4 +18,7 @@
 	git://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
 
 4.ShowMarks插件需要在对应目录下建立doc文件夹
-$HOME/.vim/bundle/ShowMarks
+	$HOME/.vim/bundle/ShowMarks
+
+5.tagbar插件需要CTags的支持
+	将ctags.exe放置在git目录下
