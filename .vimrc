@@ -1616,3 +1616,8 @@ call system(“wmctrl -r :ACTIVE: -b toggle,fullscreen”)
 endfunction
 nmap <F11> :call FullScreen()<cr>
 "}}}
+
+"启动最大化
+"{{{
+au GUIEnter * simalt ~x
+"}}}
