@@ -7,7 +7,7 @@ set termencoding=utf-8
 "vundle begin
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=%USERPROFILE%/vimfiles/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -121,7 +121,7 @@ nmap <silent> <leader>cdf :cd %:h<cr>:pwd<cr>
 "map <F7> :!ctags -R --c++-kinds=+px --fields=+ilaS --extra=+q <cr>
 "map <F9> :!find `pwd` \( -name .repo -o -name .git -o -name .svn -o -name cts -o -name out \) -prune -o -type f -iregex '.*\.\(c\|s\|cpp\|java\|h\)' >cscope.files <CR>
 nmap <F7> :call RunShell("Generate tags", "ctags -R --c++-kinds=+px --fields=+ilaS --extra=+q `pwd`")<cr>
-nmap <F9> :call RunShell("Generate cscope files and lookup tags", "~/.vim/shell/gencscope.sh && ~/.vim/shell/genfiletags.sh")<cr>
+nmap <F9> :call RunShell("Generate cscope files and lookup tags", "%USERPROFILE%/vimfile/shell/gencscope.sh && %USERPROFILE%/vimfileshell/genfiletags.sh")<cr>
 nmap <F12> :!cscope -bqk -i cscope.files <cr>
 
 " Switching between buffers.
