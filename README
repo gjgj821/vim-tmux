@@ -47,6 +47,10 @@ NerdTree中添加了tag的打开
 需要安装Exuberant Ctags
 sudo apt-get install exuberant-ctags
 
+5)全屏切换需要安装wmctrl
+sudo apt-get install wmctrl
+F11即可
+
 三.tmux可能遇到的问题
 
 1)进入后没有任何改变
