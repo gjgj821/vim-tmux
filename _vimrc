@@ -1616,3 +1616,8 @@ nmap <F11> :!start GVimWindow<CR>
 nmap <C-F11> :!start GVimWindow "ontop"<CR>
 nmap <S-F11> :!start GVimWindow 
 "}}}
+
+"启动最大化
+"{{{
+au GUIEnter * simalt ~x
+"}}}
