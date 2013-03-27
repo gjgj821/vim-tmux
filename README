@@ -23,3 +23,7 @@
 
 5.tagbar插件需要CTags的支持
 	将ctags.exe放置在git目录下
+
+6.如果字体安装后状态栏乱码
+删除powerline缓存文件
+$HOME/.vim/bundle/vim-powerline/Powerline_default_default_fancy.cache
