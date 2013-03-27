@@ -1,8 +1,1 @@
-将找到的配色文件放置在~/.vim/colors/<name>.vim
-	建立文件夹
-		mkdir ~/.vim/colors
-	下载配色文件
-		wget <name>.vim  http://vimcolorschemetest.googlecode.com/svn/colors/<name>.vim
-		cp <name>.vim ~/.vim/colors
-vim ~/.vimrc
-       :colorscheme=<name>
+直接建立目录，用于存放vim所需
