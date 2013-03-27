@@ -1,7 +1,7 @@
 "~/.vimrc (configuration file for vim only)
 
 " Encoding related
-set fileencodings=utf-8,gb2312,gbk,gb18030
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8
 
 "vundle begin
