@@ -19,15 +19,23 @@ Bundle 'gmarik/vundle'
 
 " vim-scripts repos
 ""{{{
+" 改良C++STL高亮检测
 Bundle 'STL-improved'
+" ctags的sidebar
 Bundle 'majutsushi/tagbar'
+" ctags在新tab
 Bundle 'tag_in_new_tab'
+" cscope索引自动加载插件
 Bundle 'autoload_cscope.vim'
+" 缓冲区浏览 <C-n>切换文件以及缓冲浏览
 Bundle 'CmdlineComplete'
+
 Bundle 'xptemplate'
+" 自动补全
 Bundle 'neocomplcache'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'osyo-manga/neocomplcache-clang_complete'
+" lookpfile需要
 Bundle 'genutils'
 Bundle 'kien/ctrlp.vim'
 Bundle 'ack.vim'
@@ -35,6 +43,7 @@ Bundle 'bash-support.vim'
 Bundle 'slimv.vim'
 Bundle 'adah1972/tellenc.git'
 Bundle 'translate.vim'
+" 
 Bundle 'bufexplorer.zip'
 ""}}}
 " 快速导航文件
@@ -43,6 +52,7 @@ Bundle 'autopreview'
 Bundle 'mbbill/echofunc.git'
 Bundle 'grep.vim'
 Bundle 'a.vim'
+" 快速查找文件
 Bundle 'lookupfile'
 Bundle 'OmniTags'
 "Bundle 'vim-scripts/SrcExpl.git'
@@ -73,6 +83,7 @@ Bundle 'LargeFile'
 Bundle 'Color-Sampler-Pack'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'txt.vim'
+" 记录最近打开的文件
 Bundle 'mru.vim'
 Bundle 'YankRing.vim'
 Bundle 'tpope/vim-surround.git'
@@ -86,6 +97,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'snipMate'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'matchit.zip'
+" 增强tab键功能
 Bundle 'ervandew/supertab.git'
 
 " 智能打开文件的插件
@@ -98,7 +110,9 @@ Bundle 'vim-surround.git'
 " 多重色彩括号
 Bundle 'vim-scripts/Rainbow-Parenthesis.git'
 Bundle 'Townk/vim-autoclose'
+" 样式包
 "Bundle 'ColorSamplerPack'
+" 快速切换样式
 Bundle 'ScrollColors'
 
 " non github repos
@@ -173,9 +187,8 @@ let g:fencview_autodetect = 1
 """""""""""""""""""""""""""""""""""""
 hi Normal ctermbg=NONE  "开启背景透明
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
-"colorscheme peaksea
 let g:solarized_termcolors=256
-colorscheme ir_black
+colorscheme desert
 set background=dark
 " }}}
 
