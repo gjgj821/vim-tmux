@@ -12,13 +12,17 @@ filetype off                   " required!
 
 set rtp+=%USERPROFILE%/.vim/bundle/vundle/
 call vundle#rc()
-
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
+"格式1：Github上其他用户的仓库（非vim-scripts账户里的仓库，所以要加Github用户名）
+"Bundle 'tpope/vim-fugitive'
+"格式2：vim-scripts里面的仓库，直接打仓库名即可。
+"Bundle 'FuzzyFinder'
+"Bundle 'L9'
+"格式3：非Github的Git仓库
+"Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 
-" vim-scripts repos
-""{{{
 " 改良C++STL高亮检测
 Bundle 'STL-improved'
 " ctags的sidebar
@@ -27,96 +31,140 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tag_in_new_tab'
 " cscope索引自动加载插件
 Bundle 'autoload_cscope.vim'
-" 缓冲区浏览 <C-n>切换文件以及缓冲浏览
-Bundle 'CmdlineComplete'
+"在.c/.cpp与.h间快速切换
+Bundle 'a.vim'
+"提供标准C函数与语法的快速引用
+"Bundle 'CRefVim'
+"[default],cc;,cu注释与取消注释快速切换
+Bundle 'c.vim'
+"in real-time inside Vim using a Cscope database
+Bundle 'CCTree'
+"omnifunc cppcomplete function for C and C++ files
+Bundle 'OmniCppComplete'
+" C/C++防止头文件重复包含
+Bundle 'headerGatesAdd.vim'
 
+"自动补全括号
+Bundle 'Townk/vim-autoclose'
+" 代码段补全
+Bundle 'snipMate'
+" 代码段补全
 Bundle 'xptemplate'
 " 自动补全
 Bundle 'neocomplcache'
+" 自动补全
 Bundle 'Rip-Rip/clang_complete'
-Bundle 'osyo-manga/neocomplcache-clang_complete'
-" lookpfile需要
+" 自动补全
+" clang补全,与omnicppcomplete冲突
+" Bundle 'osyo-manga/neocomplcache-clang_complete'
+" lookpfile需要基本的vim开发函数库
 Bundle 'genutils'
+"L9 provides some utility functions and commands for programming in Vim
+Bundle 'L9'
+" 查找文件
 Bundle 'kien/ctrlp.vim'
-Bundle 'ack.vim'
-Bundle 'bash-support.vim'
-Bundle 'slimv.vim'
-Bundle 'adah1972/tellenc.git'
-Bundle 'translate.vim'
-" 
-Bundle 'bufexplorer.zip'
-""}}}
-" 快速导航文件
-Bundle 'wincent/Command-T'
-Bundle 'autopreview'
-Bundle 'mbbill/echofunc.git'
-Bundle 'grep.vim'
-Bundle 'a.vim'
 " 快速查找文件
 Bundle 'lookupfile'
+" 基于Perl的Ack模块的文件查找
+Bundle 'ack.vim'
+"在目录中查找包含指定文件内容
+Bundle 'grep.vim'
+"编辑大文件,g:LargeFile设置最小值
+Bundle 'LargeFile'
+
+" 缓冲区浏览 <C-n>切换文件以及缓冲浏览自动载入cscope.out databases
+Bundle 'CmdlineComplete'
+" 通用的文本文档语法
+Bundle 'txt.vim'
+" write HTML code faster
+Bundle 'rstacruz/sparkup.git'
+" web快速开发插件 html css
+Bundle 'mattn/zencoding-vim.git'
+" bash脚本的支持
+Bundle 'bash-support.vim'
+" lisp的开发插件
+Bundle 'slimv.vim'
+" 查看文件编码
+Bundle 'adah1972/tellenc.git'
+Bundle 'translate.vim'
+"输入时提示
+Bundle 'nvie/vim-flake8'
+"looks up a word in dictionary file using egrep
+Bundle 'bufexplorer.zip'
+"类似TextMate中的Command-T,Go to File
+Bundle 'wincent/Command-T'
+"查看函数原型
+Bundle 'autopreview'
+"查看函数定义
+Bundle 'mbbill/echofunc.git'
+"维护 tags file
 Bundle 'OmniTags'
+"source explore
+"管理Source Explorer, Taglist and NERD Tree
 "Bundle 'vim-scripts/SrcExpl.git'
-Bundle 'wesleyche/Trinity.git'
+" 和上面一样
 Bundle 'wesleyche/SrcExpl.git'
+Bundle 'wesleyche/Trinity.git'
+"编辑多个文件，标签显示
 Bundle 'minibufexpl.vim'
-Bundle 'L9'
+"quickly reach the buffer/file/command/bookmark/tag you want
 Bundle 'FuzzyFinder'
 
 " 代码注释
 Bundle 'The-NERD-Commenter'
-Bundle 'mattn/zencoding-vim.git'
-Bundle 'FencView.vim'
-"Bundle 'CRefVim'
-Bundle 'c.vim'
-Bundle 'CCTree'
-Bundle 'OmniCppComplete'
+"doxygen风格快速注释
+Bundle 'DoxygenToolkit.vim'
+"对齐文本
 Bundle 'Tabular'
+"Line drawing/painting using the mouse
 Bundle 'sketch.vim'
 
+"对打开的文件的编码自动识别
+Bundle 'FencView.vim'
+" 项目中文件与目录名模糊查询
+Bundle 'shemerey/vim-peepopen.git'
 " 智能文件管理
 Bundle 'The-NERD-tree'
+"Bundle 'scrooloose/nerdtree'
+"Git wrapper
 Bundle 'tpope/vim-fugitive.git'
+"Rails开发插件
 Bundle 'tpope/vim-rails.git'
-Bundle 'LargeFile'
-
-"Bundle 'QFixToggle'
-Bundle 'Color-Sampler-Pack'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'txt.vim'
-" 记录最近打开的文件
-Bundle 'mru.vim'
-Bundle 'YankRing.vim'
-Bundle 'tpope/vim-surround.git'
-Bundle 'DoxygenToolkit.vim'
-Bundle 'headerGatesAdd.vim'
-Bundle 'ShowMarks'
-Bundle 'Lokaltog/vim-powerline'
-
-" for my plugin
-" 代码段补全
-Bundle 'snipMate'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'matchit.zip'
+" Quick窗口切换
+" under linux need exec 'dos2unix ~/.vim/bundle/QFixToggle/plugin/qfixtoggle.vim'
+Bundle 'QFixToggle'
 " 增强tab键功能
 Bundle 'ervandew/supertab.git'
+"切换显示marks
+Bundle 'ShowMarks'
+"提供了一组对应默认移动操作的键绑定, 能搜索并高亮所有可能的选择以供跳转
+Bundle 'Lokaltog/vim-easymotion'
+"对%命令进行扩展使得能在嵌套标签和语句之间跳转
+Bundle 'matchit.zip'
 
-" 智能打开文件的插件
-Bundle 'shemerey/vim-peepopen.git'
-
-" write HTML code faster
-Bundle 'rstacruz/sparkup.git'
-Bundle 'vim-surround.git'
-
-" 多重色彩括号
-Bundle 'vim-scripts/Rainbow-Parenthesis.git'
-Bundle 'Townk/vim-autoclose'
-" 样式包
+" color schemes 库
+Bundle 'Color-Sampler-Pack'
+" 样式包重名为上面
 "Bundle 'ColorSamplerPack'
 " 快速切换样式
 Bundle 'ScrollColors'
+" 测试color shemes
+Bundle 'altercation/vim-colors-solarized'
+" 多重色彩括号
+Bundle 'vim-scripts/Rainbow-Parenthesis.git'
+"缤纷的状态栏 let g:Powerline_symbols = 'fancy'
+Bundle 'Lokaltog/vim-powerline'
 
-" non github repos
-" ...
+" 记录最近打开的文件
+Bundle 'mru.vim'
+"类似emacs删除环
+Bundle 'YankRing.vim'
+"删除,改变或添加surroundings
+Bundle 'tpope/vim-surround.git'
+"删除,改变或添加surroundings
+Bundle 'vim-surround.git'
+
+
 filetype plugin indent on     " required!
 "vundle end
 
@@ -159,7 +207,7 @@ noremap <Down> gj
 " Note: if system install "Lingoes Translator",
 "   you will need change/disabled hot key.
 noremap! <M-j> <Down>
-noremap! <M-k> <Up>
+
 noremap! <M-h> <left>
 noremap! <M-l> <Right>
 
@@ -168,7 +216,7 @@ set pastetoggle=<F2>
 nnoremap <silent> <F3> :Grep<CR>
 " nnoremap <silent> <F4> :Rgrep<CR>
 
-nmap  <F4> :vimgrep /<C-R>=expand("<cword>")<cr>/ **/*.c **/*.h<cr><C-o>:cw<cr>
+nmap  <F4> :vimgrep /<C-R>=expand("<r>/ **/*.c **/*.h<cr><C-o>:cw<cr>
 " make you could press F6 key to enable or disable the preview window, you can also set to other favorite hotkey here
 nnoremap <F6> :AutoPreviewToggle<CR>
 inoremap <F6> <ESC>:AutoPreviewToggle<CR>i
@@ -317,7 +365,7 @@ let g:Powerline_symbols = 'fancy'
 set statusline=%F%m%r%h%w\ %{&ff}\ %Y\ [ascii:%b\ hex:0x\%02.2B]\ [%{(&fenc\ ==\ \"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %=%l/%L,%v\ %p%%
 set showcmd                 " 在状态栏显示目前所执行的指令，未完成的指令片段亦
                             " 会显示出来
-                            " }}}
+" }}}
 
 " 自定义命令 {{{
 """""""""""""""""""""""""""""""""""""
@@ -527,6 +575,7 @@ nmap <C-]> :tj <C-R>=expand("<cword>")<CR><CR>
 " the word will be swapped with the next word.  The words may
 " even be separated by punctuation (such as "abc = def").
 " nnoremap <unique> <silent><leader>sw "_yiw:s/\(\%#\w\+\)\(\W\+\)\(\w\+\)/\3\2\1/<cr><c-o>
+" }}}
 
 "neocomplcache.vba 插件替代autocomplpop(acp.vim) omnicppcomplete.vim {{{
 "-----------------------------------------------------------------
@@ -744,8 +793,7 @@ endfunction
 "autocmd BufWritePost *.{h,hpp,c,cpp} call AutoUpdateTheLastUpdateInfo()
 "autocmd BufNewFile *.{h,hpp,c,cpp} exec 'call append(0, "\/\/ Last Update:" . strftime("%Y-%m-%d %H:%M:%S", localtime()))'
 
-"NERD_commenter.vim "可以使用cvim.zip, 但是这个觉到习惯一些
-""{{{
+"NERD_commenter.vim "可以使用cvim.zip, 但是这个觉到习惯一些 {{{
 
 let NERDSpaceDelims=1 " 让注释符与语句之间留一个空格
 
@@ -779,9 +827,7 @@ let NERD_c_alt_style=1
 
 "}}}
 
-"F8单独切换打开NERD_tree ( F8 )
-
-"{{{
+"F8单独切换打开NERD_tree ( F8 ){{{
 
 "-----------------------------------------------------------------
 
@@ -871,11 +917,14 @@ function! ToggleNERDTreeAndTagbar()
         endif
     endfor
 endfunction
-nmap <F8> :call ToggleNERDTreeAndTagbar()<CR>
+"nmap <F8> :call ToggleNERDTreeAndTagbar()<CR>
+nnoremap <F8> :NERDTreeToggle<CR>
+inoremap <F8> <ESC>:NERDTreeToggle<CR>
+nnoremap <C-F8> :TagbarToggle<CR>
+inoremap <C-F8> <ESC>:TagbarToggle<CR>
 ""}}}
 
-"vim折叠功能
-""{{{
+"vim折叠功能 {{{
 
 "折叠方式,可用选项 'foldmethod' 来设定折叠方式：set fdm=***
 
@@ -945,8 +994,7 @@ set fdm=marker
 
 "}}}
 
-"文件比较
-""{{{
+"文件比较{{{
 
 ":vertical diffsplit FILE_RIGHT "与已打开的文件进行比较
 
@@ -984,8 +1032,7 @@ set diffopt=context:3
 
 ""}}}
 
-"bufexplorer插件
-"{{{
+"bufexplorer插件 {{{
 
 "map :BufExplorer
 
@@ -999,8 +1046,7 @@ set diffopt=context:3
 
 "}}}
 
-"echofunc.vim 在命令行中显示函数信息
-""{{{
+"echofunc.vim 在命令行中显示函数信息 {{{
 "直接下载解压即可( tags 插件已包含相似功能, 没必要装此插件 )
 
 "这个插件的功能需要 tags 文件的支持, 并且在创建 tags 文件的时候要加选项"--fields=+lS" : ctags -R --fields=+lS
@@ -1013,8 +1059,7 @@ let g:EchoFuncLangsUsed = ["c","java","cpp"]
 
 ""}}}
 
-"scrollcolor.vim 和 color_sample_pack.vim
-"{{{
+"scrollcolor.vim 和 color_sample_pack.vim {{{
 
 "1. 下载scrollcolor http://www.vim.org/scripts/script.php?script_id=1488
 
@@ -1026,9 +1071,7 @@ let g:EchoFuncLangsUsed = ["c","java","cpp"]
 
 "}}}
 
-"CCtree.Vim C Call-Tree Explorer 源码浏览工具 关系树 (赞)
-
-""{{{
+"CCtree.Vim C Call-Tree Explorer 源码浏览工具 关系树 (赞) {{{
 
 "1. 除了cscope ctags 程序的安装,还需安装强力胶 ccglue(ctags-cscope glue): http://sourceforge.net/projects/ccglue/files/src/
 
@@ -1078,8 +1121,7 @@ let g:EchoFuncLangsUsed = ["c","java","cpp"]
 
  ""}}}
 
-"cvim.zip插件--编码必备
-""{{{
+"cvim.zip插件--编码必备 {{{
 
 "下载地址: http://www.vim.org/scripts/script.php?script_id=213
 "
@@ -1113,27 +1155,24 @@ let g:EchoFuncLangsUsed = ["c","java","cpp"]
 
 " /hp show plugin help (n,i)
 
-""}}}
+""}}} 
+"a.vim实现源文件与头文件切换 {{{ 
 
-"a.vim实现源文件与头文件切换
-"{{{
+let alternateSearchPath = 'sfr:.,sfr:./include,sfr:../include,sfr:../inc' 
+"设置include(.h)文件存在何处.  
 
-let alternateSearchPath = 'sfr:.,sfr:./include,sfr:../include,sfr:../inc' "设置include(.h)文件存在何处.
+let alternateNoDefaultAlternate = 1 
+"当没有找到相应的.h文件时,不自动创建 
 
-let alternateNoDefaultAlternate = 1 "当没有找到相应的.h文件时,不自动创建
-
-"   使用方法
-":A 切换当前文件的头文件,在当前窗口打开(或者反过来) "先打开.h .c 文件存于buff中
-
-":AS 功能同:A,但是切换到水平分割窗口的打开
-
-":AV 功能同:A,但是切换到竖直分割的窗口打开
-
+"   使用方法 
+":A 切换当前文件的头文件,在当前窗口打开(或者反过来) 
+"先打开.h .c 文件存于buff中 
+":AS 功能同:A,但是切换到水平分割窗口的打开 
+":AV 功能同:A,但是切换到竖直分割的窗口打开 
 ":AT 功能同:A,但是切换到标签页打开
 
 "}}}
-" plugin - matchit.vim 对%命令进行扩展使得能在嵌套标签和语句之间跳转
-"{{{
+" plugin - matchit.vim 对%命令进行扩展使得能在嵌套标签和语句之间跳转 {{{
 " %              正向匹配
 
 " g%            反向匹配
@@ -1144,8 +1183,7 @@ let alternateNoDefaultAlternate = 1 "当没有找到相应的.h文件时,不自�
 
 " }}}
 
-"vim 自带Marks的使用, 如果不习惯可以使用插件ShowMarks(下面有介绍), 使能showmarks_enable = 1
-"{{{
+"vim 自带Marks的使用, 如果不习惯可以使用插件ShowMarks(下面有介绍), 使能showmarks_enable = 1  {{{
 
 "这个功能是VIM自带的功能, 习惯就好, 一切从简．可以查看帮助文档, 下面是简单介绍.
 
@@ -1183,9 +1221,7 @@ let alternateNoDefaultAlternate = 1 "当没有找到相应的.h文件时,不自�
 
 
 
-"ShowMarks高亮功能显示出标记的位置( 先使用vim提供的sign功能进行标记位置 )
-
-"{{{
+"ShowMarks高亮功能显示出标记的位置( 先使用vim提供的sign功能进行标记位置 )  {{{
 
 " ================= (第一个) http://www.vim.org/scripts/script.php?script_id=152 对vim7.x是有一小点问题的. =============
 
@@ -1234,8 +1270,7 @@ hi ShowMarksHLu ctermbg=Yellow ctermfg=Black "guibg=#FFB3FF guifg=Black
 "}}}
 
 
-"mark.vim 当你在文件中想多个不同的关键词,且用不同的颜色显示, 那么该插件可你帮助你
-"{{{
+"mark.vim 当你在文件中想多个不同的关键词,且用不同的颜色显示, 那么该插件可你帮助你 {{{
 
 "下载地址: http://www.vim.org/scripts/script.php?script_id=1238
 
@@ -1273,8 +1308,7 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 
 "}}}
 
-"srcexpl.vim just like source insight
-" {{{
+"srcexpl.vim just like source insight {{{
 " // The switch of the Source Explorer                                         "
 " nmap <F8> :SrcExplToggle<CR>
 "                                                                              "
@@ -1384,17 +1418,12 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 
 "}}}
 
-"vim master
-""{{{
-
-"Verdancy --- New Commer
-
-""{{{
+"Verdancy --- New Commer  {{{
 
 " f --- find; practic : (before)"aabbbccdd" --> ex: dfc --> (after)"cdd"
+" }}}
 
-"寄存器
-"""{{{
+"寄存器 {{{
 
 " q[a-z] --- 记录命令, 已q结束, @[a-z]引用 --- 很强大,需要习惯使用
 "
@@ -1404,9 +1433,7 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 "
 " ""}}}
 
-"Visual 选中模式
-
-""{{{
+"Visual 选中模式{{{
 
 " shift + v : 配合jk,上下键,整行选择
 
@@ -1426,17 +1453,13 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 
 ""}}}
 
-"Command Mode
-
-""{{{
+"Command Mode {{{
 
 " :g/pattern/d --- delete line contained of string "pattern"
 
 ""}}}
 
-"窗口
-
-""{{{
+"窗口 {{{
 
 "ctrl + 0 : 恢复窗口大小
 
@@ -1463,53 +1486,31 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 
 ""}}}
 
-"杂项
-
-""{{{
+"杂项 {{{
 
 " !!date --- 插入日期
 
 " read !date -R --- 插入日期 ( -R 显示日期的格式而已 man date )
 
-"
-
 " ctr + w ctrl + c --- 关闭当前窗口
 
-"
-
 " %s//s/+$// --- 删除多余的空格
-
-"
 
 " ctrl + K --- 插入特殊字符
 
 " digraph --- 显示特殊字符,字符组合
 
-"
-
 " set ic --- 忽略大小写
-
-"
 
 " . --- 重复前次操作
 
-"
-
 " ctrl + a --- repeat record.
-
-"
 
 " ctrl + r --- 反撤消, 当u撤消后,又想恢复,可以使用
 
-"
-
 " daw && caw && cis --- delete a word && change a word && 修改一个句子
 
-"
-
 " cc && dd --- change one line reserving indent && delete one line
-
-"
 
 " CTRL+U ---- CTRL+D ---> half page move
 
@@ -1517,12 +1518,9 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 
 " CTRL+F ---- CTRL+B ---> one page move
 
-"
-
 " CTRL + O --- 返回刚才位置,每按一次都会退回到之前的位置
 
 " CTRL + I --- 与CTRL+O相反,每按一次退回来
-
 
 " [i --- (将光标移到变量上)显示第一个局部变量定义处
 
@@ -1532,7 +1530,6 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 
 " // ---- 精确查找
 
-
 " 16进制编辑,码农必备,lol
 
 " :%!xxd 16进制编辑
@@ -1540,17 +1537,11 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 
 ""}}}
 
-""}}}
-
 "Shell
 
-""{{{
-
-"巧妙去除Linux下代码行中的^M符号和windows下代码编辑引起的警告错
+"巧妙去除Linux下代码行中的^M符号和windows下代码编辑引起的警告错 {{{
 
 ":%s /^M//g ，其中^M的写法是按住ctrl不放，再按v，然后按M，再放ctrl
-
-""{{{
 
 " #wash_error.sh
 
@@ -1570,12 +1561,7 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 
 ""}}}
 
-"巧妙去除Linux下代码行中的^M符号和windows下代码编辑引起的警告错
-
-""}}}
-
-"个人工程shell
-"{{{
+"个人工程shell {{{
 
 "1. 创建cscope库 cs.sh
 
@@ -1622,15 +1608,14 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 " export MYTAGS_DB=/home/tags/tags
 
 "}}}
+""}}}
 
-"全屏切换，置顶，透明
-"{{{
+"全屏切换，置顶，透明 {{{
 nmap <F11> :!start GVimWindow<CR>
 nmap <C-F11> :!start GVimWindow "ontop"<CR>
 nmap <S-F11> :!start GVimWindow 
 "}}}
 
-"启动最大化
-"{{{
+"启动最大化 {{{
 au GUIEnter * simalt ~x
 "}}}
