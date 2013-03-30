@@ -29,4 +29,5 @@
 $HOME/.vim/bundle/vim-powerline/Powerline_default_default_fancy.cache
 
 7.全屏切换，置顶，透明插件
-将GVimWindow.exe放置在git目录下
+将gvimfullscreen.dll放置在gvim执行目录下
+如果不能用，则将gvimfllscreen_x32.dll放置在同目录下，并替换gvimfullscreen.dll

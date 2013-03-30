@@ -171,6 +171,24 @@ filetype plugin indent on     " required!
 let mapleader=","   " 映射快捷键开始命令,缺省为'/'(已经移到上面)
 let g:mapleader=","
 
+" return OS type, eg: windows, or linux, mac, et.st..
+function! MySys()
+    if has("win16") || has("win32") || has("win64") || has("win95")
+        return "windows"
+    elseif has("unix")
+        return "linux"
+    endif
+endfunction
+
+" 用户目录变量$VIMFILES
+if MySys() == "windows"
+    let $VIMFILES = $VIM.'/vimfiles'
+elseif MySys() == "linux"
+    let $VIMFILES = $HOME.'/.vim'
+endif
+
+" 设定doc文档目录
+let helptags=$VIMFILES.'/doc'
 " 自定义快捷键
 function! RunShell(Msg, Shell)
     echo a:Msg . '...'
@@ -312,9 +330,13 @@ endif
      set guioptions-=r " 关闭右边滚动条
 
      set guioptions-=R " 关闭垂直分隔窗口右边滚动条
-
-     set guifont=DejaVu_Sans_Mono_for_Powerline:h10"
-
+	 
+	if MySys() == "windows"
+		set guifont=DejaVu_Sans_Mono_for_Powerline:h10 "
+	elseif MySys() == "linux"
+		guifont=Monospac\ 12 "
+	endif
+	
      set guicursor=a:blinkon0 "停止光标闪烁
 
  endif
@@ -1611,9 +1633,14 @@ hi MarkWord7 ctermbg=Green ctermfg=White guibg=#A4E57E guifg=Black
 ""}}}
 
 "全屏切换，置顶，透明 {{{
-nmap <F11> :!start GVimWindow<CR>
-nmap <C-F11> :!start GVimWindow "ontop"<CR>
-nmap <S-F11> :!start GVimWindow 
+if MySys() == "windows"
+	nmap <F11> :call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 1)<CR>
+elseif MySys() == "linux"
+	function! FullScreen()
+		call system(“wmctrl -r :ACTIVE: -b toggle,fullscreen”)
+	endfunction
+	nmap <F11> :call FullScreen()<CR>
+endif
 "}}}
 
 "启动最大化 {{{
