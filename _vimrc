@@ -168,6 +168,20 @@ Bundle 'tpope/vim-surround.git'
 "删除,改变或添加surroundings
 Bundle 'vim-surround.git'
 
+" vundle comment{{{
+" original repos on github
+ Bundle 'tpope/vim-fugitive'
+ Bundle 'Lokaltog/vim-easymotion'
+ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+ Bundle 'tpope/vim-rails.git'
+ " vim-scripts repos
+ Bundle 'L9'
+ Bundle 'FuzzyFinder'
+ " non github repos
+ Bundle 'git://git.wincent.com/command-t.git'
+ " ...
+"}}}
+
 "}}}
 
 filetype plugin indent on     " required!
@@ -230,9 +244,8 @@ noremap! <M-l> <Right>
 set pastetoggle=<F2>
 "/<C-R><C-W> : 把单个<cword>单词放入搜索或者命令行
 nnoremap <silent> <F3> :Grep<CR>
-" nnoremap <silent> <F4> :Rgrep<CR>
 
-nmap  <F4> :vimgrep /<C-R>=expand("<r>/ **/*.c **/*.h<cr><C-o>:cw<cr>
+noremap <F4> :vimgrep/<C-R>=expand("<cword>")<CR>/j **/*.cpp **/*.h **/*.py **/*.php **/*.lua<CR><C-o>:cw<CR>
 " make you could press F6 key to enable or disable the preview window, you can also set to other favorite hotkey here
 nnoremap <F6> :AutoPreviewToggle<CR>
 inoremap <F6> <ESC>:AutoPreviewToggle<CR>i
