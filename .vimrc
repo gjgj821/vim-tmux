@@ -54,7 +54,7 @@ Bundle 'FuzzyFinder'
 
 " 代码注释
 Bundle 'The-NERD-Commenter'
-Bundle 'mattn/zencoding-vim.git'
+Bundle 'mattn/emmet-vim.git'
 Bundle 'FencView.vim'
 "Bundle 'CRefVim'
 Bundle 'c.vim'
