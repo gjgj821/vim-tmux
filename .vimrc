@@ -93,7 +93,6 @@ Bundle 'shemerey/vim-peepopen.git'
 
 " write HTML code faster
 Bundle 'rstacruz/sparkup.git'
-Bundle 'vim-surround.git'
 
 " 多重色彩括号
 Bundle 'vim-scripts/Rainbow-Parenthesis.git'
