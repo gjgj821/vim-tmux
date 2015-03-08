@@ -79,7 +79,8 @@ Bundle 'tpope/vim-surround.git'
 Bundle 'DoxygenToolkit.vim'
 Bundle 'headerGatesAdd.vim'
 Bundle 'ShowMarks'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
+" Bundle 'Lokaltog/vim-powerline'
 
 " for my plugin
 " 代码段补全
@@ -299,7 +300,9 @@ endif
 
 " vim-powerline statubar related
 set laststatus=2 " always have status-line'
-let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
+set fillchars+=stl:\ ,stlnc:\ 
+" let g:Powerline_symbols = 'fancy'
 set statusline=%F%m%r%h%w\ %{&ff}\ %Y\ [ascii:%b\ hex:0x\%02.2B]\ [%{(&fenc\ ==\ \"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %=%l/%L,%v\ %p%%
 set showcmd                 " 在状态栏显示目前所执行的指令，未完成的指令片段亦
                             " 会显示出来
