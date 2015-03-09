@@ -1,7 +1,7 @@
-保存配置vim及tmux的配置文件
- 使用Vundle管理vim插件，既方便有省心，我们只需维护好.vimrc文件，便很方便的管理，更新vim插件。
+### 保存配置vim及tmux的配置文件
+> 使用Vundle管理vim插件，既方便有省心，我们只需维护好.vimrc文件，便很方便的管理，更新vim插件。
 
-一.使用方法：
+## 一.使用方法：
 cd ~
 git clone https://github.com/gjgj821/vim-tmux.git 
 
@@ -25,12 +25,11 @@ cp vim-tmux/.tmux.conf ~/.tmux.conf
 cp vim-tmux/.tmux-powerlinerc ~/.tmux-powerlinerc
 
 
-二.vim可能存在的问题：
+## 二.vim可能存在的问题：
 1)powerline乱码问题
 目前作者已经更换项目了，我将Ubuntu的默认字体文件放置在.fonts文件夹下，可以直接复制
 #其他字体需要说明操作
 https://powerline.readthedocs.org/en/latest/installation/linux.html#font-installation
-#官方otf字体不知为何无效，日后研究
 
 2)Command-t安装问题
 错误：`require’: no such file to load — mkmf (LoadError)'
@@ -52,7 +51,7 @@ sudo apt-get install exuberant-ctags
 sudo apt-get install wmctrl
 F11即可
 
-三.tmux可能遇到的问题
+## 三.tmux可能遇到的问题
 
 1)进入后没有任何改变
 有可能tmux没有加载配置文件
@@ -66,7 +65,7 @@ tmux source-file ~/.tmux.conf
 sudo apt-get install curl
 
 
-三.Vundle说明
+## 四.Vundle说明
 1.Vundle介绍
 项目托管在github上 https://github.com/gmarik/vundle
 其特色在于使用git来管理插件,更新方便，支持搜索，一键更新，从此只需要一个vimrc走天下.
@@ -76,4 +75,4 @@ sudo apt-get install curl
 
 windows下使用，可以考虑放置在$HOME/.vim/bundle/vundle
 
-四.Windows下使用的配置文件
+## 五.Windows下使用的配置文件
