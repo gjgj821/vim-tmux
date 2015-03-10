@@ -19,22 +19,56 @@ Bundle 'gmarik/vundle'
 
 " vim-scripts repos
 ""{{{
-Bundle 'STL-improved'
+"Improved C++ STL syntax highlighting
+"Bundle 'STL-improved'
+
+" funcation map . need ctag  :Tagbar
 Bundle 'majutsushi/tagbar'
+
+" simple tab on window top :tab
 Bundle 'tag_in_new_tab'
-Bundle 'autoload_cscope.vim'
-Bundle 'CmdlineComplete'
-Bundle 'xptemplate'
+
+" automatically load cscope.out databases into vim when you open a C file
+"Bundle 'autoload_cscope.vim'
+
+" press Ctrl-P or Ctrl-N to complete the word before the cursor, using
+" keywords in the current file
+"Bundle 'CmdlineComplete'
+
+" 代码片段补全: ctrl+\
+"Bundle 'xptemplate'
+
+" 终极自动补全
 Bundle 'neocomplcache'
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'osyo-manga/neocomplcache-clang_complete'
+
+" uses clang for accurately completing C and C++ code
+"Bundle 'Rip-Rip/clang_complete'
+
+" deprecated
+"Bundle 'osyo-manga/neocomplcache-clang_complete'
+
+" 提供了一些通用的函数，可供其它的脚本使用,loopupfile
 Bundle 'genutils'
+
+" Full path fuzzy file, buffer, mru, tag, ... finder for Vim. ctrl+p
 Bundle 'kien/ctrlp.vim'
+
+" 代码搜索工具:需要安装ack,https://github.com/ggreer/the_silver_searcher
 Bundle 'ack.vim'
+
+" vim-support to bash IDE 
 Bundle 'bash-support.vim'
-Bundle 'slimv.vim'
+
+" The Superior Lisp Interaction Mode for vim
+"Bundle 'slimv.vim'
+
+" 检测文件编码
 Bundle 'adah1972/tellenc.git'
-Bundle 'translate.vim'
+
+" 翻译插件
+"Bundle 'translate.vim'
+
+" bufexplorer.zip :Bufexplorer <leader> be
 Bundle 'bufexplorer.zip'
 ""}}}
 " 快速导航文件
