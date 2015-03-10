@@ -68,12 +68,17 @@ Bundle 'adah1972/tellenc.git'
 " 翻译插件
 "Bundle 'translate.vim'
 
-" bufexplorer.zip :Bufexplorer <leader> be
+" 历史打开文件列表 :Bufexplorer <leader> be
 Bundle 'bufexplorer.zip'
 ""}}}
+
 " 快速导航文件
 Bundle 'wincent/Command-T'
-Bundle 'autopreview'
+
+" 预览已定义的变量及函数列表
+"Bundle 'autopreview'
+
+
 Bundle 'mbbill/echofunc.git'
 Bundle 'grep.vim'
 Bundle 'a.vim'
