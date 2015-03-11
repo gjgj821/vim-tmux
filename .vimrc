@@ -69,7 +69,7 @@ Bundle 'adah1972/tellenc.git'
 "Bundle 'translate.vim'
 
 " 历史打开文件列表 :Bufexplorer <leader> be
-Bundle 'bufexplorer.zip'
+"Bundle 'bufexplorer.zip'
 ""}}}
 
 " 快速导航文件
@@ -78,21 +78,64 @@ Bundle 'wincent/Command-T'
 " 预览已定义的变量及函数列表
 "Bundle 'autopreview'
 
+" Display c/c++ function declaration in vim command/status line 
+" let statusline += %{EchoFuncGetStatusLine()}
+"Bundle 'mbbill/echofunc.git'
 
-Bundle 'mbbill/echofunc.git'
+" 在vim中使用grep（好几个grep）,打开匹配列表（文件夹搜索）  :Grep 
 Bundle 'grep.vim'
-Bundle 'a.vim'
+
+" 快速在头文件和源文件切换 <leader> ih  <leader> is
+"Bundle 'a.vim'
+
+" 快速匹对文件，需要ctags支持  F5/:LookupFile   ctrl+n  ctrl+p
+" 支持缓存区浏览:LUBufs，目录浏览:LUWalk
 Bundle 'lookupfile'
+
+" 帮助维护tag文件
+" :OmniTagsLoad /path/to/tags-file  
+" :OmniTagsUpdate {file1} {file2} ...  
+" :OmniTagsUnload
 Bundle 'OmniTags'
-"Bundle 'vim-scripts/SrcExpl.git'
+
+" 管理 SourceExploer Taglist and NERD Tree
+" :TrinityToggleAll
+" :TrinityToggleSourceExplorer
+" :TrinityToggleTagList
+" :TrinityToggleNERDTree
 Bundle 'wesleyche/Trinity.git'
+
+" 源代码预览，新窗口查看函数定义，变量定义，依赖ctags
+" :SrcExpl or
+" :SrcExplToggle
 Bundle 'wesleyche/SrcExpl.git'
-Bundle 'minibufexpl.vim'
+
+" 打开缓冲区的文件列表为tab，用于快速切换
+"Bundle 'minibufexpl.vim'
+
+" 函数库，用于其他插件使用
 Bundle 'L9'
+
+" 快速搜寻档案、Buffer、书签、指令、标签的一个介面
+" FufBuffer - Buffer mode (fuf-buffer-mode) 
+" FufFile - File mode (fuf-file-mode) 
+" FufDir - Directory mode (fuf-dir-mode) 
+" FufMruFile - MRU-File mode (fuf-mrufile-mode) 
+" FufMruCmd - MRU- Command mode (fuf-mrucmd-mode) 
+" FufBookmark - Bookmark mode (fuf-bookmark-mode) 
+" FufTag - Tag mode (fuf-tag-mode) 
+" FufTaggedFile - Tagged-File mode (fuf-taggedfile-mode) 
+" FufJumpList - Jump-List mode (fuf-jumplist-mode) 
+" FufChangeList - Change-List mode (fuf-changelist-mode) 
+" FufQuickfix - Quickfix mode (fuf-quickfix-mode) 
+" FufLine - Line mode (fuf-line-mode) 
+" FufHelp - Help mode (fuf-help -mode)
 Bundle 'FuzzyFinder'
 
 " 代码注释
 Bundle 'The-NERD-Commenter'
+
+
 Bundle 'mattn/emmet-vim.git'
 Bundle 'FencView.vim'
 "Bundle 'CRefVim'
