@@ -15,6 +15,6 @@ sh <(curl https://j.mp/spf13-vim3 -L)>
     * .vimrc.local         :添加自定义的按键绑定
 
 # 2.spf13的按键说明
-* leader : ,
-* *`*<leader> / : 搜索高亮开关`
-* 
+* leader : `,`
+* `<leader> / `: 搜索高亮开关
+* `<leader> ff`: 快速搜索当前游标所在的变量
